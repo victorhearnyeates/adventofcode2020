@@ -41,9 +41,15 @@ class NumberComparisonSpec extends AnyFlatSpec with Matchers {
     output shouldBe Map.empty[Int, Chunk]
   }
 
-  "compareNumbers" should "return the list of numbers that add to 2020" in {
+  "compareTwoNumbers" should "return the list of numbers that add to 2020" in {
     val listOfNumbers = NumberComparison.listFromSource(numbersFile)
 
-    NumberComparison.compareNumbers(listOfNumbers) shouldBe List(473, 1547)
+    NumberComparison.compareTwoNumbers(listOfNumbers) shouldBe List(473, 1547)
+  }
+
+  "compareThreeNumbers" should "return the list of numbers that add to 2020 multiplied" in {
+    val listOfNumbers = NumberComparison.listFromSource(numbersFile)
+
+    NumberComparison.compareThreeNumbers(listOfNumbers) shouldBe Set(116115990)
   }
 }
