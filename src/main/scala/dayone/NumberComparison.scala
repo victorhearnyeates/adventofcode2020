@@ -1,13 +1,10 @@
 package dayone
 
 import scala.annotation.tailrec
-import scala.io.BufferedSource
 
 object NumberComparison {
 
   type Chunk = List[Int]
-
-  def listFromSource(source: BufferedSource): List[Int] = source.getLines().toList.map(_.toInt)
 
   def compareTwoNumbers(list: List[Int]): List[Int] = {
     val sorted = list.sorted
